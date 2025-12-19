@@ -99,25 +99,25 @@ public class ProductManagement {
 
     public static void updateProduct(Scanner scanner){
         System.out.println("Nhap vao ma san pham: ");
-        do {
-            int maSP = Integer.parseInt(scanner.nextLine());
-            if (maSP.equals("")){
-                System.err.println("Vui long nhap vao thong tin san pham! Try again!");
-                continue;
-            }
-
-
-        }while (true);
+//        do {
+//            int maSP = Integer.parseInt(scanner.nextLine());
+//            if (maSP.equals("")){
+//                System.err.println("Vui long nhap vao thong tin san pham! Try again!");
+//                continue;
+//            }
+//
+//
+//        }while (true);
     }
 
     // search sp
-    public static int searchSanPham(int id){
-        for (int i = 0; i < currentIndex; i++) {
-            if (arrProducts[i].getMaSP() == id) {
-                return i;
-            }
-            return -1;
-        }
-
-    }
+//    public static int searchSanPham(int id){
+//        for (int i = 0; i < currentIndex; i++) {
+//            if (arrProducts[i].getMaSP() == id) {
+//                return i;
+//            }
+//            return -1;
+//        }
+//
+//    }
 }

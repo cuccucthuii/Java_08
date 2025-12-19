@@ -1,4 +1,44 @@
 package HomeWork.G2;
 
 public class RectangleManagement {
+    public static void main(String[] args) {
+        Rectangle r1 = new Rectangle(3, 4);
+        Rectangle r2 = new Rectangle(5, 2);
+        Rectangle r3 = new Rectangle(4.5, 3.5);
+
+        Rectangle[] rectangles = {r1, r2, r3};
+
+        System.out.println("Danh sach hinh chu nhat:");
+        for (Rectangle r : rectangles) {
+            System.out.println(r);
+        }
+
+        double maxArea = rectangles[0].getArea();
+        for (Rectangle r : rectangles) {
+            if (r.getArea() > maxArea) {
+                maxArea = r.getArea();
+            }
+        }
+
+        int count = 0;
+        for (Rectangle r : rectangles) {
+            if (r.getArea() == maxArea) {
+                count++;
+            }
+        }
+
+        System.out.println("\nDien tich lon nhat: " + maxArea);
+
+        if (count > 1) {
+            System.out.println("Co " + count + " hinh co dien tich lon nhat:");
+        } else {
+            System.out.println("Hinh co dien tich lon nhat:");
+        }
+
+        for (Rectangle r : rectangles) {
+            if (r.getArea() == maxArea) {
+                System.out.println(r);
+            }
+        }
+    }
 }
